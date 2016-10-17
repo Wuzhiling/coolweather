@@ -75,13 +75,13 @@ public class CoolWeatherDB {
         if (cursor.moveToNext()) {
             do {
                 Province province = new Province();
-                s
+
                 province.setId(cursor.getInt(cursor.getColumnIndex("id")));
                 province.setProvinceName(cursor.getString(cursor.getColumnIndex("province_name")));
                 province.setProvinceCode(cursor.getString(cursor.getColumnIndex("province_code")));
 
                 list.add(province);
-            } while (cursor.moveToNext())
+            } while (cursor.moveToNext());
         }
         return list;
     }
